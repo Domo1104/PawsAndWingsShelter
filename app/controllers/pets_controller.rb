@@ -3,13 +3,13 @@ class PetsController < ApplicationController
     
     #GET /pets
     def index
-        pets = Pets.all
+        pets = Pet.all
         render json: pets
     end
 
     #GET /pets/:id
     def show
-        pet = find_by
+        pet = find_pet
         render json: pet
     end
 
@@ -21,7 +21,7 @@ class PetsController < ApplicationController
 
     #PATCH /pets/:id
     def update
-        pet = find_by
+        pet = find_pet
         pet.update(pet_params)
         render json: pet
     end
