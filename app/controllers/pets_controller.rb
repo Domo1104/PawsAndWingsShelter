@@ -16,7 +16,7 @@ class PetsController < ApplicationController
     #POST /pets/:id
     def create
         pet = Pet.create!(pet_params)
-        render json: pets, status: :created
+        render json: pet, status: :created
     end
 
     #PATCH /pets/:id

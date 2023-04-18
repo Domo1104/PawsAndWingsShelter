@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
-
-
+    
     #GET /users
     def index
         user = User.all

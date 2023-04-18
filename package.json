@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Domo1104/PawsAndWingsShelter/issues"
   },
-  "homepage": "https://github.com/Domo1104/PawsAndWingsShelter#readme"
+  "homepage": "https://github.com/Domo1104/PawsAndWingsShelter#readme",
+  "dependencies": {
+    "@petfinder/petfinder-js": "^1.0.6"
+  }
 }
