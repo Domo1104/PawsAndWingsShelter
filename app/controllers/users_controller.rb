@@ -43,7 +43,7 @@ class UsersController < ApplicationController
     end
 
     def user_params
-        params.permit(:username, :first_name, :last_name, :email, :phone, :address, :city_town, :state, :zipcode, :password_digest)
+        params.permit(:username, :first_name, :last_name, :email, :phone, :address, :city_town, :state, :zipcode, :password_digest, :password_confirmation)
     end
 
     def authorized

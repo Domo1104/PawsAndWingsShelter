@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   post "/login", to: "sessions#create"
+  get "/accountinfo", to: "users#index"
   delete "/logout", to: "sessions#destroy"
-  post "/signup", to: "sessions#create"
-  get "/accountinfo", to: "users#show"
+  post "/signup", to: "users#create"
+
 end

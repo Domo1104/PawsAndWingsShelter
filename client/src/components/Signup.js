@@ -13,9 +13,10 @@ function Signup() {
   const [state, setState] = useState("");
   const [zipcode, setZipcode] = useState("");
   const [password, setPassword] = useState("");
+  const [passwordConfirmation, setPasswordConfirmation] = useState("");
   const navigate = useNavigate();
 
-  function handleSignup(e) {
+  function handleSignup() {
     let userInfo = {
       username: username,
       first_name: firstName,
@@ -27,8 +28,10 @@ function Signup() {
       state: state,
       zipcode: zipcode,
       password: password,
+      password_confirmation: passwordConfirmation,
     };
-    fetch("/users", {
+    console.log(userInfo)
+    fetch("/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -46,6 +49,18 @@ function Signup() {
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+        />
+        <label htmlFor="password"> Password </label>
+        <input 
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <label htmlFor="password_confirmation"> Confirm Password </label>
+        <input 
+          type="password"
+          value={passwordConfirmation}
+          onChange={(e) => setPasswordConfirmation(e.target.value)}
         />
         <label htmlFor="first_name"> First Name </label>
         <input
@@ -92,7 +107,9 @@ function Signup() {
         />
         <label htmlFor="zipcode"> Zipcode </label>
         <input
-            type="text"
+            type="number"
+            value={zipcode}
+            onChange={(e) => setZipcode(e.target.value)}
         />
         <button onClick={handleSignup}>Submit</button>
     </div>

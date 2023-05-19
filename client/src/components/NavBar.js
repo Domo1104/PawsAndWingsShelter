@@ -11,15 +11,26 @@ function NavBar({ handleLogout, userLogin }) {
         <Link className="links" to="/catadoption"> Cat Adoption </Link>
         <Link className="links" to="/birdadoption"> Bird Adoption </Link>
         <Link className="links" to="/petcare"> Pet Care </Link>
-        <Link className="links" to="/shelterorganizations"> Shelters/Organizations </Link>
-      </div>
-      <div className="login-signup">
-        <Link className="links" to="/login"> Login </Link>
-        <Link className="links" to="/signup"> Signup </Link>
+        <Link className="links" to="/sheltersorganizations"> Shelters/Organizations </Link>
+        <Link className="links" to="/accountinfo"> Account Info </Link>
       </div>
       {/* Change Login button to Logout */}
-        {userLogin !== null }
-      
+      {userLogin !== null ? (
+          <div className="login-signup">
+            <Link className="link" to="/" onClick={handleLogout}>
+              Logout
+            </Link>
+          </div>
+        ) : (
+          <div className="login-signup">
+            <Link className="link" to="/signup">
+              Sign Up
+            </Link>
+            <Link className="link" to="/login">
+              Log In
+            </Link>
+          </div>
+        )}
     </div>
   );
 }
