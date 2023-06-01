@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   
     def create
       user = User.find_by(username: params[:username].downcase)
-      puts params
+      # puts params
       if user.present? && user.authenticate(params[:password])
         session[:user_id] = user.id
         render json: user, status: :created

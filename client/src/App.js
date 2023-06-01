@@ -55,7 +55,7 @@ function App() {
         <NavBar handleLogout={ handleLogout } userLogin={ userLogin }/>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/dogadoption" element={<DogAdoption />} />
+          <Route path="/dogadoption" element={<DogAdoption dogs = {dogs} />} />
           <Route path="/catadoption" element={<CatAdoption />} />
           <Route path="/birdadoption" element={<BirdAdoption />} />
           <Route path="/petcare" element={<PetCare />} />

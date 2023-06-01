@@ -1,0 +1,23 @@
+.row {
+    margin: 1%;
+    background: white;
+    padding: 1rem;
+    border: 1px solid #777;
+    border-radius: .50rem;
+    display: flex;
+    position: static;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 500px;
+    width: 285px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.row:hover {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    cursor: pointer;
+}
