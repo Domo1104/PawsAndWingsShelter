@@ -35,7 +35,9 @@ function App() {
       setDogs(dogData.data.animals);
       setCats(catData.data.animals);
       setBirds(birdData.data.animals);
-      console.log(dogData);
+      console.log(dogData, "dog");
+      console.log(catData, "cat");
+      console.log(birdData, "bird");
     };
     fetchAnimalData();
   }, []);
@@ -56,8 +58,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/dogadoption" element={<DogAdoption dogs = {dogs} />} />
-          <Route path="/catadoption" element={<CatAdoption />} />
-          <Route path="/birdadoption" element={<BirdAdoption />} />
+          <Route path="/catadoption" element={<CatAdoption cats = {cats} />} />
+          <Route path="/birdadoption" element={<BirdAdoption birds = {birds} />} />
           <Route path="/petcare" element={<PetCare />} />
           <Route path="/sheltersorganizations" element={<SheltersOrganizations />} />
           <Route path="/login"  element={userLogin !==null? <Navigate to = "/" />  : <Login setUserLogin = {setUserLogin} />} />

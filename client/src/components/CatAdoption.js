@@ -1,6 +1,18 @@
+import AnimalListingCard from "./AnimalListingCard"
 
+function CatAdoption({ cats }) {
 
-function CatAdoption() {
+    return (
+        <div>
+        {cats.map((cat) => {
+            return (
+                <div key={cat.id} >
+                    <AnimalListingCard animal = {cat} />
+                </div>
+            )
+        })}
+        </div>
+    )
 
 }
 

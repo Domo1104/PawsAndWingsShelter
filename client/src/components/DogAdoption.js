@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { redirect } from "react-router-dom";
+// import { useEffect } from "react";
+// import { redirect } from "react-router-dom";
 import AnimalListingCard from "./AnimalListingCard";
 
 function DogAdoption({ dogs }) {
@@ -7,7 +7,7 @@ function DogAdoption({ dogs }) {
     <div>
       {dogs.map((dog) => {
         return (
-          <div>
+          <div key={dog.id}>
             <AnimalListingCard animal={dog} />
           </div>
         );
